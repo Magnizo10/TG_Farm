@@ -6,6 +6,7 @@ CREATE TABLE suppliers (
     email VARCHAR(100),
     portstaladdress VARCHAR(200)
 );
+
 CREATE TABLE suppliertransactions (
     transactionsID INT PRIMARY KEY IDENTITY,
     supplierID INT,
@@ -15,6 +16,7 @@ CREATE TABLE suppliertransactions (
     TransactionDate DATE,
     FOREIGN KEY (supplierID) REFERENCES suppliers(supplierID)
 );
+
 SELECT * FROM suppliertransactions;
 
 CREATE TABLE farmers (
